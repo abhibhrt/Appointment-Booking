@@ -1,6 +1,18 @@
 "use client";
 
-import { FaUser, FaPhone, FaEnvelope, FaCalendarAlt, FaClock, FaMapMarkerAlt, FaStethoscope, FaWhatsapp, FaCheck, FaAward, FaHeart } from "react-icons/fa";
+import {
+  FaUser,
+  FaPhone,
+  FaEnvelope,
+  FaCalendarAlt,
+  FaClock,
+  FaMapMarkerAlt,
+  FaStethoscope,
+  FaWhatsapp,
+  FaCheck,
+  FaAward,
+  FaHeart,
+} from "react-icons/fa";
 import { useState } from "react";
 
 export default function BookAppointment() {
@@ -11,7 +23,7 @@ export default function BookAppointment() {
     preferredDate: "",
     preferredTime: "",
     message: "",
-    appointmentType: "consultation"
+    appointmentType: "consultation",
   });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -20,14 +32,14 @@ export default function BookAppointment() {
   const handleChange = (e) => {
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value
+      [e.target.name]: e.target.value,
     });
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
-    await new Promise(resolve => setTimeout(resolve, 2000));
+    await new Promise((resolve) => setTimeout(resolve, 2000));
     setIsSubmitting(false);
     setIsSubmitted(true);
   };
@@ -36,12 +48,18 @@ export default function BookAppointment() {
     { value: "consultation", label: "Initial Consultation", icon: "👨‍⚕️" },
     { value: "followup", label: "Follow-up Visit", icon: "📋" },
     { value: "emergency", label: "Emergency Consultation", icon: "🚨" },
-    { value: "treatment", label: "Treatment Planning", icon: "🔬" }
+    { value: "treatment", label: "Treatment Planning", icon: "🔬" },
   ];
 
   const timeSlots = [
-    "09:00 AM", "10:00 AM", "11:00 AM", "12:00 PM", 
-    "02:00 PM", "03:00 PM", "04:00 PM", "05:00 PM"
+    "09:00 AM",
+    "10:00 AM",
+    "11:00 AM",
+    "12:00 PM",
+    "02:00 PM",
+    "03:00 PM",
+    "04:00 PM",
+    "05:00 PM",
   ];
 
   return (
@@ -53,21 +71,25 @@ export default function BookAppointment() {
           <div className="absolute top-1/2 right-1/4 w-20 h-20 bg-teal-500 rounded-full animate-bounce delay-1000"></div>
           <div className="absolute bottom-20 left-1/3 w-28 h-28 bg-green-500 rounded-full animate-ping opacity-20"></div>
         </div>
-        
+
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 lg:py-5">
           <div className="text-center max-w-4xl mx-auto animate-fade-in-up">
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-green-100 text-green-700 text-sm font-medium mb-6 border border-green-200 animate-pulse">
               <FaCalendarAlt className="mr-2" />
               Start Your Journey
             </div>
-            
+
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-6">
-              Book Your <span className="bg-gradient-to-r from-blue-600 to-teal-600 bg-clip-text text-transparent">Appointment</span>
+              Book Your{" "}
+              <span className="bg-gradient-to-r from-blue-600 to-teal-600 bg-clip-text text-transparent">
+                Appointment
+              </span>
             </h1>
-            
+
             <p className="text-xl text-gray-600 leading-relaxed max-w-3xl mx-auto">
-              Take the first step towards your parenthood journey. Schedule your 
-              consultation with Dr. Supriya Hajela at NABH Accredited Hajela Hospital today.
+              Take the first step towards your parenthood journey. Schedule your
+              consultation with Dr. Supriya Hajela at NABH Accredited Hajela
+              Hospital today.
             </p>
           </div>
         </div>
@@ -76,7 +98,6 @@ export default function BookAppointment() {
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            
             {/* Main Form Section */}
             <div className="lg:col-span-2">
               {isSubmitted ? (
@@ -86,18 +107,22 @@ export default function BookAppointment() {
                       <FaCheck className="text-2xl text-white" />
                     </div>
                   </div>
-                  <h2 className="text-3xl font-bold text-gray-900 mb-4">Appointment Request Sent!</h2>
+                  <h2 className="text-3xl font-bold text-gray-900 mb-4">
+                    Appointment Request Sent!
+                  </h2>
                   <p className="text-gray-600 text-lg mb-6">
-                    Thank you for booking your appointment. Our team will contact you within 24 hours to confirm your consultation.
+                    Thank you for booking your appointment. Our team will
+                    contact you within 24 hours to confirm your consultation.
                   </p>
                   <div className="space-y-4">
                     <div className="bg-green-50 border border-green-200 rounded-lg p-4">
-                      <p className="text-green-700 font-semibold">What's Next?</p>
+                      <p className="text-green-700 font-semibold">What&apos;s Next?</p>
                       <p className="text-gray-600 text-sm mt-1">
-                        We'll call you at {formData.phone} to confirm your preferred time slot.
+                        We&apos;ll call you at {formData.phone} to confirm your
+                        preferred time slot.
                       </p>
                     </div>
-                    <button 
+                    <button
                       onClick={() => setIsSubmitted(false)}
                       className="w-full bg-blue-600 text-white py-3 px-6 rounded-xl font-semibold hover:bg-blue-700 transition-colors duration-300 shadow-md hover:shadow-lg"
                     >
@@ -108,33 +133,42 @@ export default function BookAppointment() {
               ) : (
                 <div className="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-200 animate-fade-in-up">
                   <div className="bg-gradient-to-r from-blue-600 to-teal-600 p-6">
-                    <h2 className="text-2xl font-bold text-white">Personal Information</h2>
-                    <p className="text-white/90 text-sm mt-1">Fill in your details to schedule your consultation</p>
+                    <h2 className="text-2xl font-bold text-white">
+                      Personal Information
+                    </h2>
+                    <p className="text-white/90 text-sm mt-1">
+                      Fill in your details to schedule your consultation
+                    </p>
                   </div>
-                  
+
                   <form onSubmit={handleSubmit} className="p-6 space-y-6">
                     <div>
-                      <label className="block text-gray-900 font-semibold mb-3">Appointment Type</label>
+                      <label className="block text-gray-900 font-semibold mb-3">
+                        Appointment Type
+                      </label>
                       <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
                         {appointmentTypes.map((type) => (
-                          <label 
+                          <label
                             key={type.value}
-                            className={`relative flex flex-col items-center p-3 border-2 rounded-xl cursor-pointer transition-all duration-300 ${
-                              formData.appointmentType === type.value 
-                                ? 'border-blue-600 bg-blue-50' 
-                                : 'border-gray-300 hover:border-blue-400'
-                            }`}
+                            className={`relative flex flex-col items-center p-3 border-2 rounded-xl cursor-pointer transition-all duration-300 ${formData.appointmentType === type.value
+                                ? "border-blue-600 bg-blue-50"
+                                : "border-gray-300 hover:border-blue-400"
+                              }`}
                           >
                             <input
                               type="radio"
                               name="appointmentType"
                               value={type.value}
-                              checked={formData.appointmentType === type.value}
+                              checked={
+                                formData.appointmentType === type.value
+                              }
                               onChange={handleChange}
                               className="absolute opacity-0"
                             />
                             <span className="text-2xl mb-2">{type.icon}</span>
-                            <span className="text-sm font-medium text-center text-gray-700">{type.label}</span>
+                            <span className="text-sm font-medium text-center text-gray-700">
+                              {type.label}
+                            </span>
                           </label>
                         ))}
                       </div>
@@ -142,7 +176,9 @@ export default function BookAppointment() {
 
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                       <div className="space-y-2">
-                        <label className="block text-gray-900 font-semibold">Full Name *</label>
+                        <label className="block text-gray-900 font-semibold">
+                          Full Name *
+                        </label>
                         <div className="relative">
                           <FaUser className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" />
                           <input
@@ -158,7 +194,9 @@ export default function BookAppointment() {
                       </div>
 
                       <div className="space-y-2">
-                        <label className="block text-gray-900 font-semibold">Phone Number *</label>
+                        <label className="block text-gray-900 font-semibold">
+                          Phone Number *
+                        </label>
                         <div className="relative">
                           <FaPhone className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" />
                           <input
@@ -175,7 +213,9 @@ export default function BookAppointment() {
                     </div>
 
                     <div className="space-y-2">
-                      <label className="block text-gray-900 font-semibold">Email Address</label>
+                      <label className="block text-gray-900 font-semibold">
+                        Email Address
+                      </label>
                       <div className="relative">
                         <FaEnvelope className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" />
                         <input
@@ -191,7 +231,9 @@ export default function BookAppointment() {
 
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                       <div className="space-y-2">
-                        <label className="block text-gray-900 font-semibold">Preferred Date</label>
+                        <label className="block text-gray-900 font-semibold">
+                          Preferred Date
+                        </label>
                         <div className="relative">
                           <FaCalendarAlt className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" />
                           <input
@@ -199,14 +241,16 @@ export default function BookAppointment() {
                             name="preferredDate"
                             value={formData.preferredDate}
                             onChange={handleChange}
-                            min={new Date().toISOString().split('T')[0]}
+                            min={new Date().toISOString().split("T")[0]}
                             className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500/50 focus:border-blue-500 transition-all duration-300"
                           />
                         </div>
                       </div>
 
                       <div className="space-y-2">
-                        <label className="block text-gray-900 font-semibold">Preferred Time</label>
+                        <label className="block text-gray-900 font-semibold">
+                          Preferred Time
+                        </label>
                         <div className="relative">
                           <FaClock className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" />
                           <select
@@ -217,7 +261,9 @@ export default function BookAppointment() {
                           >
                             <option value="">Select time slot</option>
                             {timeSlots.map((time) => (
-                              <option key={time} value={time}>{time}</option>
+                              <option key={time} value={time}>
+                                {time}
+                              </option>
                             ))}
                           </select>
                         </div>
@@ -225,7 +271,9 @@ export default function BookAppointment() {
                     </div>
 
                     <div className="space-y-2">
-                      <label className="block text-gray-900 font-semibold">Additional Message</label>
+                      <label className="block text-gray-900 font-semibold">
+                        Additional Message
+                      </label>
                       <textarea
                         name="message"
                         value={formData.message}
@@ -258,23 +306,34 @@ export default function BookAppointment() {
             {/* Sidebar Information */}
             <div className="space-y-6">
               {/* Clinic Information */}
-              <div className="bg-white rounded-2xl p-6 shadow-lg border border-gray-200 animate-fade-in-up" style={{ animationDelay: "100ms" }}>
+              <div
+                className="bg-white rounded-2xl p-6 shadow-lg border border-gray-200 animate-fade-in-up"
+                style={{ animationDelay: "100ms" }}
+              >
                 <h3 className="text-xl font-bold text-gray-900 mb-4 flex items-center">
                   <FaMapMarkerAlt className="text-blue-600 mr-2" />
                   Clinic Information
                 </h3>
                 <div className="space-y-3">
                   <p className="text-gray-600 text-sm leading-relaxed">
-                    <strong className="text-gray-900">Hajela Hospital</strong><br />
-                    NABH Accredited ART Centre<br />
+                    <strong className="text-gray-900">Hajela Hospital</strong>
+                    <br />
+                    NABH Accredited ART Centre
+                    <br />
                     Bhopal, Madhya Pradesh
                   </p>
                   <div className="space-y-2">
-                    <a href="tel:+91XXXXXXXXXX" className="flex items-center text-gray-700 hover:text-blue-600 transition-colors">
+                    <a
+                      href="tel:+91XXXXXXXXXX"
+                      className="flex items-center text-gray-700 hover:text-blue-600 transition-colors"
+                    >
                       <FaPhone className="mr-2 text-sm" />
                       +91 XXXXXXXXXX
                     </a>
-                    <a href="mailto:info@hajelahospital.com" className="flex items-center text-gray-700 hover:text-blue-600 transition-colors">
+                    <a
+                      href="mailto:info@hajelahospital.com"
+                      className="flex items-center text-gray-700 hover:text-blue-600 transition-colors"
+                    >
                       <FaEnvelope className="mr-2 text-sm" />
                       info@hajelahospital.com
                     </a>
@@ -283,7 +342,10 @@ export default function BookAppointment() {
               </div>
 
               {/* Emergency Contact */}
-              <div className="bg-gradient-to-r from-blue-600 to-teal-600 rounded-2xl p-6 text-white animate-fade-in-up" style={{ animationDelay: "200ms" }}>
+              <div
+                className="bg-gradient-to-r from-blue-600 to-teal-600 rounded-2xl p-6 text-white animate-fade-in-up"
+                style={{ animationDelay: "200ms" }}
+              >
                 <h3 className="text-xl font-bold mb-3 flex items-center">
                   <FaStethoscope className="mr-2" />
                   Emergency Contact
@@ -291,9 +353,9 @@ export default function BookAppointment() {
                 <p className="text-white/90 text-sm mb-4">
                   For urgent medical concerns, contact us immediately
                 </p>
-                <a 
-                  href="https://wa.me/91XXXXXXXXXX" 
-                  target="_blank" 
+                <a
+                  href="https://wa.me/91XXXXXXXXXX"
+                  target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center justify-center w-full bg-white text-blue-600 py-3 px-4 rounded-xl font-semibold hover:bg-gray-50 transition-colors duration-300 shadow-md"
                 >
@@ -303,7 +365,10 @@ export default function BookAppointment() {
               </div>
 
               {/* Why Choose Us */}
-              <div className="bg-white rounded-2xl p-6 shadow-lg border border-gray-200 animate-fade-in-up" style={{ animationDelay: "300ms" }}>
+              <div
+                className="bg-white rounded-2xl p-6 shadow-lg border border-gray-200 animate-fade-in-up"
+                style={{ animationDelay: "300ms" }}
+              >
                 <h3 className="text-xl font-bold text-gray-900 mb-4 flex items-center">
                   <FaAward className="text-teal-600 mr-2" />
                   Why Choose Us?
@@ -314,9 +379,12 @@ export default function BookAppointment() {
                     { text: "14+ Years Experience", icon: "🎯" },
                     { text: "Personalized Care", icon: "❤️" },
                     { text: "Advanced Technology", icon: "🔬" },
-                    { text: "High Success Rates", icon: "📈" }
+                    { text: "High Success Rates", icon: "📈" },
                   ].map((feature, index) => (
-                    <div key={index} className="flex items-center text-gray-600 text-sm">
+                    <div
+                      key={index}
+                      className="flex items-center text-gray-600 text-sm"
+                    >
                       <span className="mr-2">{feature.icon}</span>
                       {feature.text}
                     </div>
@@ -325,7 +393,10 @@ export default function BookAppointment() {
               </div>
 
               {/* Quick Stats */}
-              <div className="bg-gradient-to-r from-green-500 to-teal-500 rounded-2xl p-6 text-white animate-fade-in-up" style={{ animationDelay: "400ms" }}>
+              <div
+                className="bg-gradient-to-r from-green-500 to-teal-500 rounded-2xl p-6 text-white animate-fade-in-up"
+                style={{ animationDelay: "400ms" }}
+              >
                 <h3 className="text-xl font-bold mb-4 flex items-center">
                   <FaHeart className="mr-2" />
                   Our Success
@@ -342,7 +413,6 @@ export default function BookAppointment() {
                 </div>
               </div>
             </div>
-
           </div>
         </div>
       </section>
