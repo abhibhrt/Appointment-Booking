@@ -1,7 +1,29 @@
 "use client";
+<<<<<<< HEAD
 import { FaAward, FaGraduationCap, FaHeart, FaMicroscope, FaSyringe, FaSnowflake, FaHeartbeat, FaUserMd, FaProcedures, FaStar, FaHandHoldingHeart, FaRibbon, FaCalendarCheck, FaPhone } from "react-icons/fa";
 import { useEffect, useState } from "react";
 import Link from "next/link";
+=======
+import {
+  FaAward,
+  FaGraduationCap,
+  FaHeart,
+  FaMicroscope,
+  FaSyringe,
+  FaSnowflake,
+  FaHeartbeat,
+  FaUserMd,
+  FaProcedures,
+  FaStar,
+  FaHandHoldingHeart,
+  FaRibbon,
+  FaCalendarCheck,
+  FaPhone,
+} from "react-icons/fa";
+import { useEffect, useState } from "react";
+import Link from "next/link";
+import Image from "next/image";
+>>>>>>> 0c7b0ec (pc reset)
 
 export default function About() {
   const [mounted, setMounted] = useState(false);
@@ -86,7 +108,11 @@ export default function About() {
 
               <p className="text-xl text-gray-700 leading-relaxed">
                 Renowned IVF and Fertility Specialist with over 14 years of expertise in
+<<<<<<< HEAD
                 Assisted Reproductive Technology (ART). Director & IVF Coordinator at
+=======
+                Assisted Reproductive Technology (ART). Director &amp; IVF Coordinator at
+>>>>>>> 0c7b0ec (pc reset)
                 NABH Accredited Hajela Hospital, Bhopal.
               </p>
 
@@ -109,16 +135,29 @@ export default function About() {
             <div className="relative">
               <div className="text-center space-y-4">
                 <div className="w-60 h-60 mx-auto bg-gradient-to-r from-blue-600 to-teal-500 rounded-full flex items-center justify-center shadow-2xl">
+<<<<<<< HEAD
                   <img
                     src="/dr-image.png"
                     alt="Dr. Supriya Hajela"
                     className="w-56 h-56 rounded-full border-4 border-white shadow-lg"
+=======
+                  <Image
+                    src="/dr-image.png"
+                    alt="Dr. Supriya Hajela"
+                    width={224}
+                    height={224}
+                    className="rounded-full border-4 border-white shadow-lg"
+>>>>>>> 0c7b0ec (pc reset)
                   />
                 </div>
                 <div className="space-y-2">
                   <h3 className="text-2xl font-bold text-gray-900">Dr. Supriya Hajela</h3>
                   <p className="text-gray-700">MBBS, MS, FICOG</p>
+<<<<<<< HEAD
                   <p className="text-sm text-blue-600 font-semibold">Director & IVF Coordinator</p>
+=======
+                  <p className="text-sm text-blue-600 font-semibold">Director &amp; IVF Coordinator</p>
+>>>>>>> 0c7b0ec (pc reset)
                 </div>
               </div>
             </div>
@@ -192,12 +231,19 @@ export default function About() {
                 <h3 className="text-xl font-semibold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
                   {skill.title}
                 </h3>
+<<<<<<< HEAD
                 <p className="text-gray-700 leading-relaxed">
                   {skill.description}
                 </p>
                 <div className="mt-4 pt-4 border-t border-gray-200">
                   <span className="text-blue-600 text-sm font-semibold group-hover:underline transition-all duration-300">
                     Learn More →
+=======
+                <p className="text-gray-700 leading-relaxed">{skill.description}</p>
+                <div className="mt-4 pt-4 border-t border-gray-200">
+                  <span className="text-blue-600 text-sm font-semibold group-hover:underline transition-all duration-300">
+                    Learn More &rarr;
+>>>>>>> 0c7b0ec (pc reset)
                   </span>
                 </div>
               </div>
@@ -216,7 +262,11 @@ export default function About() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-12 animate-fade-in-up">
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+<<<<<<< HEAD
               Awards & <span className="bg-gradient-to-r from-blue-600 to-teal-500 bg-clip-text text-transparent">Recognition</span>
+=======
+              Awards &amp; <span className="bg-gradient-to-r from-blue-600 to-teal-500 bg-clip-text text-transparent">Recognition</span>
+>>>>>>> 0c7b0ec (pc reset)
             </h2>
             <p className="text-xl text-gray-700 max-w-3xl mx-auto">
               National and international recognition for excellence in reproductive medicine
@@ -260,6 +310,7 @@ export default function About() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
           <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-200 animate-fade-in-up">
             <FaHandHoldingHeart className="text-5xl text-blue-600 mx-auto mb-6 animate-pulse" />
+<<<<<<< HEAD
             <h2 className="text-3xl font-bold text-gray-900 mb-6">
               My Mission & Philosophy
             </h2>
@@ -268,6 +319,14 @@ export default function About() {
               compassionate, evidence-based reproductive care using the latest advancements in
               fertility treatments. At Hajela Hospital, we combine medical excellence with
               emotional support to guide you through your journey to parenthood."
+=======
+            <h2 className="text-3xl font-bold text-gray-900 mb-6">My Mission &amp; Philosophy</h2>
+            <p className="text-lg text-gray-700 leading-relaxed mb-6">
+              &quot;I believe every couple deserves the joy of parenthood. My mission is to provide
+              compassionate, evidence-based reproductive care using the latest advancements in
+              fertility treatments. At Hajela Hospital, we combine medical excellence with
+              emotional support to guide you through your journey to parenthood.&quot;
+>>>>>>> 0c7b0ec (pc reset)
             </p>
             <div className="text-right">
               <p className="text-blue-600 font-semibold">- Dr. Supriya Hajela</p>
@@ -287,10 +346,23 @@ export default function About() {
           <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6 animate-fade-in-up">
             Ready to Start Your Journey?
           </h2>
+<<<<<<< HEAD
           <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto animate-fade-in-up" style={{ animationDelay: "100ms" }}>
             Schedule a consultation with Dr. Supriya Hajela and take the first step towards parenthood
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in-up" style={{ animationDelay: "200ms" }}>
+=======
+          <p
+            className="text-xl text-white/90 mb-8 max-w-2xl mx-auto animate-fade-in-up"
+            style={{ animationDelay: "100ms" }}
+          >
+            Schedule a consultation with Dr. Supriya Hajela and take the first step towards parenthood
+          </p>
+          <div
+            className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in-up"
+            style={{ animationDelay: "200ms" }}
+          >
+>>>>>>> 0c7b0ec (pc reset)
             <Link
               href="/appointment"
               className="inline-flex items-center justify-center px-8 py-4 bg-white text-blue-600 font-semibold rounded-xl shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 group animate-pulse hover:animate-none"

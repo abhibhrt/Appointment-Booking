@@ -13,7 +13,7 @@ export const metadata = {
   keywords: [
     "IVF Specialist Bhopal",
     "Best IVF Doctor in Bhopal",
-    "Fertility Treatment India",
+    "Fertility Treatment India", 
     "Dr Supriya Hajela",
     "Hajela Hospital Bhopal",
     "ICSI IUI IVF Clinic Bhopal",
