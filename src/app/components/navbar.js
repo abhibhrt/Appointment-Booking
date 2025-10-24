@@ -1,5 +1,6 @@
 "use client";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useState, useEffect } from "react";
 import {
@@ -59,14 +60,21 @@ export default function Navbar() {
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between">
-            {/* Logo */}
+            {/* ✅ Logo */}
             <Link
               href="/"
               className="flex items-center space-x-3 group transition-all duration-300 hover:scale-105"
               aria-label="Dr. Supriya Hajela - Home"
             >
               <div className="w-12 h-12 rounded-full flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-300">
-                <img src="/logo.png" alt="Logo" className="rounded-full border-4 border-white shadow-lg"/>
+                <Image
+                  src="/logo.png"
+                  alt="Logo"
+                  width={48}
+                  height={48}
+                  className="rounded-full border-4 border-white shadow-lg"
+                  priority
+                />
               </div>
               <div className="flex flex-col">
                 <h1 className="text-xl font-bold text-gray-900">

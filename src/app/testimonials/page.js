@@ -2,11 +2,14 @@ import { FaStar, FaQuoteLeft, FaBaby, FaHeart, FaUserMd, FaUser } from "react-ic
 
 export const metadata = {
   title: "Testimonials | Patient Success Stories - Dr. Supriya Hajela",
-  description: "Read inspiring patient testimonials about successful IVF and fertility treatments at Hajela Hospital, Bhopal under Dr. Supriya Hajela's expert care.",
-  keywords: "IVF success stories, patient testimonials, fertility treatment reviews, Dr. Supriya Hajela reviews, Hajela Hospital patient experiences",
+  description:
+    "Read inspiring patient testimonials about successful IVF and fertility treatments at Hajela Hospital, Bhopal under Dr. Supriya Hajela&apos;s expert care.",
+  keywords:
+    "IVF success stories, patient testimonials, fertility treatment reviews, Dr. Supriya Hajela reviews, Hajela Hospital patient experiences",
   openGraph: {
     title: "Patient Testimonials - Dr. Supriya Hajela | IVF Success Stories",
-    description: "Real stories from successful IVF treatments and fertility journeys at Hajela Hospital, Bhopal",
+    description:
+      "Real stories from successful IVF treatments and fertility journeys at Hajela Hospital, Bhopal",
     type: "website",
   },
 };
@@ -19,9 +22,10 @@ export default function Testimonials() {
       location: "Bhopal",
       treatment: "IVF Treatment",
       rating: 5,
-      content: "After years of trying, we finally conceived through IVF under Dr. Supriya Hajela's guidance. Her support and care were exceptional! The entire team at Hajela Hospital made our journey comfortable and hopeful.",
+      content:
+        "After years of trying, we finally conceived through IVF under Dr. Supriya Hajela&apos;s guidance. Her support and care were exceptional! The entire team at Hajela Hospital made our journey comfortable and hopeful.",
       icon: <FaUser />,
-      duration: "2 years ago"
+      duration: "2 years ago",
     },
     {
       id: 2,
@@ -29,9 +33,10 @@ export default function Testimonials() {
       location: "Indore",
       treatment: "ICSI Treatment",
       rating: 5,
-      content: "Dr. Hajela made our parenthood journey smooth and hopeful. We're forever grateful for her expertise and compassionate approach. The NABH accredited facility gave us complete confidence in the treatment.",
+      content:
+        "Dr. Hajela made our parenthood journey smooth and hopeful. We&apos;re forever grateful for her expertise and compassionate approach. The NABH accredited facility gave us complete confidence in the treatment.",
       icon: <FaUser />,
-      duration: "1 year ago"
+      duration: "1 year ago",
     },
     {
       id: 3,
@@ -39,9 +44,10 @@ export default function Testimonials() {
       location: "Jabalpur",
       treatment: "IUI Treatment",
       rating: 5,
-      content: "We had almost lost hope after multiple failed attempts elsewhere. Dr. Supriya Hajela's personalized approach and advanced techniques made all the difference. Today we are blessed with twins!",
+      content:
+        "We had almost lost hope after multiple failed attempts elsewhere. Dr. Supriya Hajela&apos;s personalized approach and advanced techniques made all the difference. Today we are blessed with twins!",
       icon: <FaUser />,
-      duration: "8 months ago"
+      duration: "8 months ago",
     },
     {
       id: 4,
@@ -49,9 +55,10 @@ export default function Testimonials() {
       location: "Gwalior",
       treatment: "PCOS Management",
       rating: 5,
-      content: "As a PCOS patient, I struggled for years. Dr. Hajela's comprehensive PCOS management program changed everything. Her scientific approach combined with emotional support was incredible.",
+      content:
+        "As a PCOS patient, I struggled for years. Dr. Hajela&apos;s comprehensive PCOS management program changed everything. Her scientific approach combined with emotional support was incredible.",
       icon: <FaUser />,
-      duration: "1.5 years ago"
+      duration: "1.5 years ago",
     },
     {
       id: 5,
@@ -59,9 +66,10 @@ export default function Testimonials() {
       location: "Bhopal",
       treatment: "Fertility Preservation",
       rating: 5,
-      content: "We opted for egg freezing before my cancer treatment. Dr. Hajela's team was incredibly supportive throughout the process. Now, two years later, we're starting our IVF journey with hope.",
+      content:
+        "We opted for egg freezing before my cancer treatment. Dr. Hajela&apos;s team was incredibly supportive throughout the process. Now, two years later, we&apos;re starting our IVF journey with hope.",
       icon: <FaUser />,
-      duration: "2 years ago"
+      duration: "2 years ago",
     },
     {
       id: 6,
@@ -69,10 +77,11 @@ export default function Testimonials() {
       location: "Ujjain",
       treatment: "Laparoscopic Surgery + IVF",
       rating: 5,
-      content: "The combination of laparoscopic surgery and IVF under Dr. Hajela's care was life-changing. Her surgical expertise and IVF knowledge gave us our miracle baby after 5 years of struggle.",
+      content:
+        "The combination of laparoscopic surgery and IVF under Dr. Hajela&apos;s care was life-changing. Her surgical expertise and IVF knowledge gave us our miracle baby after 5 years of struggle.",
       icon: <FaUser />,
-      duration: "6 months ago"
-    }
+      duration: "6 months ago",
+    },
   ];
 
   const stats = [
@@ -99,7 +108,10 @@ export default function Testimonials() {
           </div>
 
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-6">
-            Patient <span className="bg-gradient-to-r from-pink-500 to-purple-500 bg-clip-text text-transparent">Testimonials</span>
+            Patient{" "}
+            <span className="bg-gradient-to-r from-pink-500 to-purple-500 bg-clip-text text-transparent">
+              Testimonials
+            </span>
           </h1>
 
           <p className="text-xl text-gray-700 leading-relaxed max-w-3xl mx-auto">
@@ -132,10 +144,11 @@ export default function Testimonials() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-800 mb-4">
-              Stories of <span className="text-pink-500">Hope & Happiness</span>
+              Stories of <span className="text-pink-500">Hope &amp; Happiness</span>
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Real experiences from couples who trusted Dr. Supriya Hajela with their fertility journey
+              Real experiences from couples who trusted Dr. Supriya Hajela with their
+              fertility journey
             </p>
           </div>
 
@@ -145,36 +158,25 @@ export default function Testimonials() {
                 key={testimonial.id}
                 className="relative bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-500 hover:scale-105 border-l-4 border-pink-500"
               >
-                {/* Quote Icon */}
                 <div className="absolute -top-4 -left-4">
                   <div className="w-8 h-8 bg-pink-500 rounded-full flex items-center justify-center shadow-lg">
                     <FaQuoteLeft className="text-white text-sm" />
                   </div>
                 </div>
 
-                {/* Baby Photo */}
-                <div className="absolute -top-4 -right-4">
-                  <div className="w-12 h-12 bg-gradient-to-r from-pink-400 to-purple-400 rounded-full flex items-center justify-center shadow-lg">
-                    <span className="text-xl">{testimonial.babyPhoto}</span>
-                  </div>
-                </div>
-
-                {/* Rating */}
                 <div className="flex items-center mb-4">
                   {[...Array(testimonial.rating)].map((_, i) => (
                     <FaStar key={i} className="text-yellow-400" />
                   ))}
                 </div>
 
-                {/* Testimonial Content */}
                 <p className="text-gray-600 leading-relaxed mb-6 italic">
-                  "{testimonial.content}"
+                  &quot;{testimonial.content}&quot;
                 </p>
 
-                {/* Patient Info */}
                 <div className="flex items-center space-x-4">
                   <div className="w-12 h-12 bg-pink-100 rounded-full flex items-center justify-center text-lg">
-                    {testimonial.image}
+                    {testimonial.icon}
                   </div>
                   <div className="flex-1">
                     <h4 className="font-semibold text-gray-800">{testimonial.name}</h4>
@@ -188,7 +190,6 @@ export default function Testimonials() {
                   </div>
                 </div>
 
-                {/* Hover Effect */}
                 <div className="absolute inset-0 bg-gradient-to-r from-pink-50 to-purple-50 rounded-2xl opacity-0 hover:opacity-100 transition-opacity duration-300 -z-10"></div>
               </div>
             ))}
